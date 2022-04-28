@@ -1,0 +1,29 @@
+<p>listado works!</p>
+
+<a (click)="goBack()">BACK</a>
+
+<h2>Exemple de Formulari</h2>
+
+<form class="" [formGroup]="testForm" name="testForm" novalidate autocomplete="off" *ngIf="testForm">
+
+    <div>
+        <label for="nom"></label>
+        <input id="nom"
+            formControlName="nom" type="text" />
+    </div>
+
+    <div>
+        <label for="cognom"></label>
+        <input id="cognom"
+            formControlName="cognom" type="text" />
+    </div>
+
+    <button type="button" (click)="addUser()">Afegir</button>
+
+</form>
+
+<h3>Llistat</h3>
+
+<ul>
+    <li *ngFor="let user of users; let $index = index">{{user.nom}}</li>
+</ul>
